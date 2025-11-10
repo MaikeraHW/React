@@ -1,0 +1,11 @@
+.container {
+  background-color: aqua;
+  width: 100%;
+}
+
+.content {
+  background-color: bisque;
+  max-width: 98rem;
+  margin: 0 auto;
+  color: var(--text-over-primary);
+}
