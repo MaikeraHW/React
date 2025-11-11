@@ -4,7 +4,8 @@ import { Container } from "./components/Container"
 import { Logo } from "./components/Logo"
 import { Menu } from "./components/Menu"
 import { ClockTimer } from "./components/ClockTimer"
-import { Forms } from "./components/Forms"
+// import { Forms } from "./components/Forms"
+import { Input } from "./components/Input"
 
 import "./theme.css"
 import "./global.css"
@@ -21,7 +22,9 @@ createRoot(document.getElementById("root")!).render(
       <ClockTimer />
     </Container>
     <Container>
-      <Forms />
+      <form className="form">
+        <Input type="text" id="task" />
+      </form>
     </Container>
   </StrictMode>
 )

@@ -1,0 +1,22 @@
+.input {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid var(--primary);
+  padding: 1rem 3rem;
+}
+
+.input::placeholder {
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: var(--disabled);
+}
+
+.input:focus {
+  border: 3px solid var(--primary);
+  border-radius: 8px;
+}
