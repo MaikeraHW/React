@@ -23,7 +23,7 @@ createRoot(document.getElementById("root")!).render(
     </Container>
     <Container>
       <form className="form">
-        <Input type="text" id="task" />
+        <Input type="text" id="task" labelText="Taredasdasdafa:" placeholder="Ex. Estudar para a prova" />
       </form>
     </Container>
   </StrictMode>

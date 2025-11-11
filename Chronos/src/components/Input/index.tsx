@@ -1,16 +1,20 @@
 type InputProps = {
   id: string
+  labelText?: string
+  placeholder: string
 } & React.ComponentProps<"input">
 
 import styles from "./styles.module.css"
 
-export function Input({ id, type }: InputProps) {
+export function Input({ id, type, labelText, placeholder, ...rest }: InputProps) {
   return (
     <>
-      <label htmlFor={id} className={styles.label}>
-        Tafera:
-      </label>
-      <input type={type} id={id} placeholder="Ex.: Estudar para a Prova" className={styles.input} />
+      {labelText && (
+        <label htmlFor={id} className={styles.label}>
+          {labelText}
+        </label>
+      )}
+      <input type={type} id={id} placeholder={placeholder} className={styles.input} {...rest} />
     </>
   )
 }
