@@ -1,0 +1,37 @@
+.div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 5rem;
+}
+
+.icon {
+  text-decoration: none;
+  font-style: none;
+  color: var(--primary);
+  font-size: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  font-weight: bold;
+}
+
+.icon:hover {
+  filter: brightness(75%);
+  transition-property: filter;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.div svg {
+  color: var(--gray-900);
+  background-color: var(--primary);
+  padding: 1.2rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 8px;
+}
