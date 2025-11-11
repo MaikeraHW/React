@@ -1,23 +1,20 @@
-import { House } from "lucide-react"
-import { History } from "lucide-react"
-import { Settings } from "lucide-react"
-import { Sun } from "lucide-react"
+import { HouseIcon, HistoryIcon, SettingsIcon, SunIcon } from "lucide-react"
 import styles from "./styles.module.css"
 
 export function Menu() {
   return (
     <div className={styles.div}>
       <a href="#" className={styles.icon}>
-        <House />
+        <HouseIcon />
       </a>
       <a href="#" className={styles.icon}>
-        <History />
+        <HistoryIcon />
       </a>
       <a href="#" className={styles.icon}>
-        <Settings />
+        <SettingsIcon />
       </a>
       <a href="#" className={styles.icon}>
-        <Sun />
+        <SunIcon />
       </a>
     </div>
   )
