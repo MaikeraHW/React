@@ -1,0 +1,8 @@
+.bold {
+  font-weight: bold;
+}
+
+.text {
+  color: var(--text-over-error);
+  margin: 3rem auto 0;
+}

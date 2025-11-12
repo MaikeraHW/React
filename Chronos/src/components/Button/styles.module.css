@@ -1,6 +1,5 @@
 .btn {
   padding: 0.5rem 10rem;
-  background-color: var(--primary);
   border-radius: 8px;
   border: none;
   margin-top: 3rem;
@@ -18,4 +17,14 @@
   display: block;
   width: 3.5rem;
   height: 3.5rem;
+}
+
+.green {
+  color: var(--text-over-primary);
+  background-color: var(--primary);
+}
+
+.red {
+  color: var(--text-over-error);
+  background-color: var(--error);
 }

@@ -1,10 +1,13 @@
+import { CirclePlayIcon } from "lucide-react"
+import { CircleStopIcon } from "lucide-react"
+
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Container } from "./components/Container"
 import { Logo } from "./components/Logo"
 import { Menu } from "./components/Menu"
 import { ClockTimer } from "./components/ClockTimer"
-// import { Forms } from "./components/Forms"
+import { Message } from "./components/Message"
 import { Input } from "./components/Input"
 import { Cicles } from "./components/Cicles"
 import { Button } from "./components/Button"
@@ -29,10 +32,13 @@ createRoot(document.getElementById("root")!).render(
       </form>
     </Container>
     <Container>
+      <Message />
+    </Container>
+    <Container>
       <Cicles />
     </Container>
     <Container>
-      <Button />
+      <Button icon={<CirclePlayIcon />} />
     </Container>
   </StrictMode>
 )
