@@ -1,5 +1,5 @@
 .input {
-  color: white;
+  color: var(--text-default);
   text-align: center;
   font-size: 1.5rem;
   background-color: transparent;
@@ -13,10 +13,15 @@
 .input::placeholder {
   font-style: italic;
   letter-spacing: 0.5px;
-  color: var(--disabled);
+  color: var(--gray-500);
 }
 
 .input:focus {
   border: 3px solid var(--primary);
   border-radius: 8px;
+}
+
+.input:disabled {
+  border-bottom: 3px solid var(--disabled);
+  color: var(--text-muted);
 }

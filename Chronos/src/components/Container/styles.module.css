@@ -7,3 +7,10 @@
   margin: 0 auto;
   color: var(--text-over-primary);
 }
+
+.content section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

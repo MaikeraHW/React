@@ -1,0 +1,40 @@
+.p {
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.circles {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.circle {
+  margin: 0.3rem;
+}
+
+.circle svg {
+  transform: scale(90%, 90%);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.green svg {
+  color: var(--primary);
+  background-color: var(--primary);
+}
+.yellow svg {
+  color: var(--warning);
+  background-color: var(--warning);
+}
+
+.blue svg {
+  color: var(--info);
+  background-color: var(--info);
+}
+
+.circle svg:hover {
+  transform: scale(100%, 100%);
+  filter: brightness(90%);
+  transition: all 100ms ease-in-out;
+}
