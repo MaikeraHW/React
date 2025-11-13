@@ -1,6 +1,6 @@
 .div {
   font-size: clamp(6rem, 20dvw, 16rem);
-  color: white;
+  color: var(--gray-100);
   display: flex;
   align-items: center;
   justify-content: center;

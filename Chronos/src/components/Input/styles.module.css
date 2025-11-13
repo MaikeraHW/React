@@ -25,3 +25,7 @@
   border-bottom: 3px solid var(--disabled);
   color: var(--text-muted);
 }
+
+.label {
+  color: var(--gray-100);
+}

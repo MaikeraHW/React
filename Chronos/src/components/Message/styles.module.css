@@ -3,6 +3,6 @@
 }
 
 .text {
-  color: var(--text-over-error);
+  color: var(--gray-100);
   margin: 3rem auto 0;
 }
