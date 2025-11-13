@@ -1,0 +1,21 @@
+.div {
+  text-align: center;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.text:hover {
+  text-decoration: underline;
+  color: var(--text-muted);
+}
