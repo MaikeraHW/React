@@ -1,7 +1,7 @@
 import { CirclePlayIcon } from "lucide-react"
 import { CircleStopIcon } from "lucide-react"
 
-import { StrictMode, useState } from "react"
+import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Container } from "./components/Container"
 import { Logo } from "./components/Logo"
