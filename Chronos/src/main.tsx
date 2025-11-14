@@ -7,11 +7,8 @@ import { Container } from "./components/Container"
 import { Logo } from "./components/Logo"
 import { Menu } from "./components/Menu"
 import { ClockTimer } from "./components/ClockTimer"
-import { Message } from "./components/Message"
-import { Input } from "./components/Input"
-import { Cicles } from "./components/Cicles"
-import { Button } from "./components/Button"
 import { Footer } from "./components/Footer"
+import { MainForm } from "./components/MainForm"
 
 import "./theme.css"
 import "./global.css"
@@ -28,18 +25,7 @@ createRoot(document.getElementById("root")!).render(
       <ClockTimer />
     </Container>
     <Container>
-      <form className="form">
-        <Input type="text" id="task" labelText="Tarefa:" placeholder="Ex. Estudar para a prova" />
-      </form>
-    </Container>
-    <Container>
-      <Message />
-    </Container>
-    <Container>
-      <Cicles />
-    </Container>
-    <Container>
-      <Button icon={<CirclePlayIcon />} />
+      <MainForm />
     </Container>
     <Container>
       <Footer />
