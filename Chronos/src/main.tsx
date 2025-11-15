@@ -1,6 +1,3 @@
-import { CirclePlayIcon } from "lucide-react"
-import { CircleStopIcon } from "lucide-react"
-
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Container } from "./components/Container"
