@@ -16,7 +16,7 @@ export function Home(props: HomeProps) {
         <ClockTimer {...props} />
       </Container>
       <Container>
-        <MainForm />
+        <MainForm {...props} />
       </Container>
     </MainTemplate>
   )
