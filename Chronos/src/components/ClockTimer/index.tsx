@@ -1,10 +1,9 @@
 import styles from "./styles.module.css"
-import type { HomeProps } from "../../pages/home"
 
-export function ClockTimer({ state }: HomeProps) {
+export function ClockTimer() {
   return (
     <div className={styles.div}>
-      <span>{state.formattedSecondsRemaining}</span>
+      <span>23:99</span>
     </div>
   )
 }
