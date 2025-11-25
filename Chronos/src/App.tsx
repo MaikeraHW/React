@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Home } from "./pages/home"
 import type { TaskStateModel } from "./models/TaskDateModel"
+import { TaskContextProvider } from "./contexts/TaskContext"
 
 const initialState: TaskStateModel = {
   tasks: [],
@@ -18,5 +19,9 @@ const initialState: TaskStateModel = {
 export function App() {
   const [state, setState] = useState(initialState)
 
-  return <Home />
+  return (
+    <TaskContextProvider>
+      <Home />
+    </TaskContextProvider>
+  )
 }
