@@ -3,7 +3,7 @@ REM Caminho do Node binário
 set NODE_PATH=C:\Users\QXZ4NPD\Desktop\QXZ4NPD\Project\node-v24.11.0-win-x64
 
 REM Caminho do projeto React
-set PROJECT_PATH=C:\Users\QXZ4NPD\Desktop\QXZ4NPD\Project\REACT\CHRONOS
+set PROJECT_PATH=C:\Users\QXZ4NPD\Desktop\QXZ4NPD\Project\REACT\HEFESTOS
 
 REM Ir para a pasta do projeto
 cd /d "%PROJECT_PATH%"
