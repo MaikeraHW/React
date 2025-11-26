@@ -16,8 +16,18 @@ export default function App(){
       setTasks(tarefas => [...tarefas, newTask])
       setNewTask("")
     }
-
   }
+
+  function deleteTask (item: string){
+      const removeTask = tasks.filter(task => task !== item)
+      setTasks(removeTask)
+
+    }
+
+  function editTask (item: string){
+    const editTask = item
+  }
+
   return (
     <div>
       <h1>Lista de Tarefas</h1>
@@ -30,6 +40,8 @@ export default function App(){
       {tasks.map((item, index) => (
         <section key={item}>
           <span>{item}</span>
+          <button onClick={() => deleteTask(item)}> Excluir </button>
+          <button onClick={() => editTask(item)}> Excluir </button>
           <hr />
         </section>
       ))}
