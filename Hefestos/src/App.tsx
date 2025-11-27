@@ -1,21 +1,69 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function App(){
+  
+
+  const inputRef = useRef<HTMLInputElement>(null)
+  const firstRender = useRef(true)
+
   const [newTask, setNewTask] = useState("")
-  const [tasks, setTasks] = useState([
-    'Estudar react com typescript',
-    'Comprar um joystick de PS5',
-    'Estudar inglês a noite'
-  ])
+  const [tasks, setTasks] = useState<string[]>([])
+
+  useEffect(() => {
+    const listaDeTarefas = localStorage.getItem("tarefinhas")
+  
+    if(listaDeTarefas){
+      setTasks(JSON.parse(listaDeTarefas));
+    }
+  
+  }, [])
+
+
+  useEffect(() => {
+    if(firstRender.current){
+      firstRender.current = false;
+    return;
+  }
+    localStorage.setItem("tarefinhas", JSON.stringify(tasks))
+  }, [tasks])
+
+
+
+
+
+  const [editSwitch, setEditSwitch] = useState ({
+    enabled: false,
+    task: ''
+
+  })
 
   function insert () {
     if(!newTask){
       alert("Digite uma nova tarefa para prosseguir")
       return
-    } else {
+    }
+
+    if(editSwitch.enabled){
+      saveEdited()
+      return
+    }
+
+      
       setTasks(tarefas => [...tarefas, newTask])
       setNewTask("")
-    }
+  }
+
+  function saveEdited(){
+    const findIndexTask = tasks.findIndex(task => task === editSwitch.task)
+    const allTasks = [...tasks]
+
+    allTasks[findIndexTask] = newTask
+    setTasks(allTasks)
+    setEditSwitch({
+      enabled: false,
+      task: ''
+    })
+    setNewTask('')
   }
 
   function deleteTask (item: string){
@@ -25,13 +73,21 @@ export default function App(){
     }
 
   function editTask (item: string){
-    const editTask = item
+
+    inputRef.current?.focus()
+
+    setNewTask(item)
+    setEditSwitch({
+      enabled: true,
+      task: (item)
+    })
+
   }
 
   return (
     <div>
       <h1>Lista de Tarefas</h1>
-      <input type="text" name="" id="newTask" placeholder="Digite uma nova tarefa" value={newTask} onChange={ (e) => setNewTask(e.target.value)}/>
+      <input type="text" name="" id="newTask" placeholder="Digite uma nova tarefa" value={newTask} onChange={ (e) => setNewTask(e.target.value)} ref={inputRef}/>
       <button type="button" onClick={insert}>Adicionar</button>
       <br /><br />
 
@@ -41,7 +97,7 @@ export default function App(){
         <section key={item}>
           <span>{item}</span>
           <button onClick={() => deleteTask(item)}> Excluir </button>
-          <button onClick={() => editTask(item)}> Excluir </button>
+          <button onClick={() => editTask(item)}> Editar </button>
           <hr />
         </section>
       ))}
