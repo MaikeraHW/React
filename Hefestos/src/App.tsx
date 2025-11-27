@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo} from "react"
 
 export default function App(){
   
@@ -28,30 +28,12 @@ export default function App(){
   }, [tasks])
 
 
-
-
-
   const [editSwitch, setEditSwitch] = useState ({
     enabled: false,
     task: ''
 
   })
 
-  function insert () {
-    if(!newTask){
-      alert("Digite uma nova tarefa para prosseguir")
-      return
-    }
-
-    if(editSwitch.enabled){
-      saveEdited()
-      return
-    }
-
-      
-      setTasks(tarefas => [...tarefas, newTask])
-      setNewTask("")
-  }
 
   function saveEdited(){
     const findIndexTask = tasks.findIndex(task => task === editSwitch.task)
@@ -84,6 +66,31 @@ export default function App(){
 
   }
 
+  const totalTarefas = useMemo(() => {
+    return tasks.length
+  }, [tasks])
+
+  
+  function insert () {
+    if(!newTask){
+      alert("Digite uma nova tarefa para prosseguir")
+      return
+    }
+
+    if(editSwitch.enabled){
+      saveEdited()
+      return
+    }
+
+      
+      setTasks(tarefas => [...tarefas, newTask])
+      setNewTask("")
+  }
+  
+
+
+
+
   return (
     <div>
       <h1>Lista de Tarefas</h1>
@@ -91,7 +98,9 @@ export default function App(){
       <button type="button" onClick={insert}>Adicionar</button>
       <br /><br />
 
+      <strong>Você tem {totalTarefas} tarefas na sua lista de tarefas</strong>
 
+       <br /><br />
 
       {tasks.map((item, index) => (
         <section key={item}>
