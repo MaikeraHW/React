@@ -1,0 +1,68 @@
+.mainContent{
+    max-width: 100rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainInput{
+    padding: 0.4rem;
+    min-width: 10rem;
+    text-align: center;
+    outline: none;
+    margin-right: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: rgb(16, 69, 112);
+}
+
+.mainButton {
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    background-color: rgb(26, 112, 182);
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: white;
+}
+
+.mainInput::placeholder{
+    color: rgb(26, 112, 182);;
+}
+
+.mainInput:focus{
+    outline: 2px solid rgb(26, 112, 182);
+    border-radius: 4px;
+}
+
+.mainButton:hover{
+    background-color: rgba(26, 112, 182, 0.63);
+}
+
+.mainInput:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.table, .table th, .table td{
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    padding: 0.3rem;
+    text-decoration: none;
+}
+
+.table{
+    width: 60rem;
+    margin-top: 2rem;
+}
+
+.table th{
+    width: 20%;
+}
+
+.table td a{
+    color: rgba(26, 112, 182, 0.63);
+    text-decoration: none;
+}
