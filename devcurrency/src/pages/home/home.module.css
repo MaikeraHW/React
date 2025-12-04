@@ -66,3 +66,25 @@
     color: rgba(26, 112, 182, 0.63);
     text-decoration: none;
 }
+
+.increase {
+    color: #12f98a;
+}
+
+.decrease {
+    color: #f91257;
+}
+
+.buttonMore{
+    padding: 0.3rem 0.5rem;
+    background-color: rgba(26, 112, 182);
+    color: white;
+    margin-top: 0.8rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.buttonMore:hover{
+    background-color: rgba(26, 112, 182, 0.63);
+    cursor: pointer;
+}
