@@ -35,13 +35,19 @@ export function Home() {
     .then(response => response.json())
     .then((data: DataProps) => {
       const coinsData = data.data
-      console.log(coinsData)
+      
+      const formatedInfo = coinsData.map( (item) => {
+        const formated = {...item,
+          nome: "teste"
+        }
+        return formated
+      })
     })
   }
 
 
   useEffect(() => {
-    getData();
+    getData()
   }, [])
 
   const navigate = useNavigate();
